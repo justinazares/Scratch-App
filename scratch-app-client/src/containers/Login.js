@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import './Login.css';
 
+// AWS
+import { Auth } from 'aws-amplify';
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +27,14 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    // Login to Amazon Cognito
+    // try {
+    //   await Auth.signIn(this.state.email, this.state.password);
+    //   alert("Logged In")
+    // } catch (e) {
+    //   alert(e.message)
+    // }
   };
 
   render() {
