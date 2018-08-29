@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -38,7 +38,12 @@ class App extends React.Component {
   };
 
   handleLogout = event => {
+    // AWS (clear the session on logout)
+    // await Auth.signOut();
+
     this.userHasAuthenticated(false);
+
+    this.props.history.push('login');
   };
 
   render() {
@@ -81,4 +86,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);
