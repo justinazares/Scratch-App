@@ -31,7 +31,7 @@ export default class Login extends Component {
     // Login to Amazon Cognito
     // try {
     //   await Auth.signIn(this.state.email, this.state.password);
-    //   alert("Logged In")
+    //   this.props.userHasAuthenticated(true);
     // } catch (e) {
     //   alert(e.message)
     // }
