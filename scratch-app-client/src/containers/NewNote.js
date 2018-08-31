@@ -35,7 +35,7 @@ export default class NewNote extends Component {
   handleSubmit = async event => {
     event.preventDefault();
 
-    if (this.file && this.file.size > congig.MAX_ATTACHMENT_SIZE) {
+    if (this.file && this.file.size > config.MAX_ATTACHMENT_SIZE) {
       alert(
         `Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE /
           100000} MB.`

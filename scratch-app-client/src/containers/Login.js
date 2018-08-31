@@ -5,7 +5,7 @@ import './Login.css';
 import LoaderButton from '../components/LoaderButton';
 
 // AWS
-import { Auth } from 'aws-amplify';
+// import { Auth } from 'aws-amplify';
 
 export default class Login extends Component {
   constructor(props) {

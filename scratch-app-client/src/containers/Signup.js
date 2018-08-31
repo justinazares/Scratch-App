@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  HelpBlock,
-  FormGroup,
-  FormControl,
-  ControlLabel
-} from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import { Auth } from 'aws-amplify';
 
 import './Signup.css';
@@ -29,7 +24,7 @@ export default class SignUp extends Component {
     return (
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
-      this.state.password == this.state.confirmPassword
+      this.state.password === this.state.confirmPassword
     );
   }
 
